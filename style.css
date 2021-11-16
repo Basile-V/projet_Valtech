@@ -1,0 +1,210 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  width: auto;
+  height: 98%;
+  background-color: black;
+}
+
+div{
+  text-align: center;
+}
+
+div.city div.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.shadow{
+  background-color: rgba(0,0,0,0.2);
+  width: 100%;
+  height: 100%;
+}
+
+div.hover p{
+  margin-bottom: 20px;
+}
+
+h2, h1{
+  margin: 0px;
+}
+
+h1{
+  font-weight: bold;
+  font-size: xxx-large
+}
+
+p{
+  margin: 0px
+}
+
+.hover{
+  display: none;
+}
+
+div.city, div.head{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+
+div.content:hover .hover{
+   display: block;
+}
+
+div.shadow:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+div.head{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("img/head.jpg");
+}
+
+a.button{
+  color: white;
+  text-decoration: none;
+  border: solid 1px white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+div.venice{
+  background-image: url("img/venice.jpg");
+}
+
+div.berlin{
+  background-image: url("img/berlin.jpg");
+}
+
+div.barcelona{
+  background-image: url("img/barcelona.jpg");
+}
+
+div.paris{
+  background-image: url("img/paris.jpg");
+}
+
+div.amsterdam{
+  background-image: url("img/amsterdam.jpg");
+}
+
+div.london{
+  background-image: url("img/london.jpg");
+}
+
+@media only screen and (max-device-width : 768px) {
+    body{
+    margin: 0px;
+  }
+  
+  section{
+    direction: flex;
+    flex-direction: row;
+    width: 375px;
+    margin: auto;
+  }
+  
+  div.city{
+    margin: 10px 0px;
+    width: 100%;
+    height: 200px;
+  }
+  
+  div.head{
+    width: 100%;
+  }
+
+  div.berlin{
+    height: 350px;
+  }
+
+  div.barcelona{
+    height: 350px;
+  }
+
+  div.paris{
+    height: 350px;
+  }
+
+  div.amsterdam{
+    height: 350px;
+  }
+}
+
+@media only screen and (min-device-width : 768px) {
+  
+  section{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 40% 29% 29%;
+    grid-template-areas:
+      "header header header header"
+      "venice venice berlin barcelona"
+      "paris amsterdam london london";
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  }
+  
+  body{
+    margin: 10px 0px;
+  }
+  
+  div.head{
+    grid-area: header;
+  }
+
+  div.venice{
+    grid-area: venice;
+  }
+
+  div.berlin{
+    grid-area: berlin;
+  }
+
+  div.barcelona{
+    grid-area: barcelona;
+  }
+
+  div.paris{
+    grid-area: paris;
+  }
+
+  div.amsterdam{
+    grid-area: amsterdam;
+  }
+
+  div.london{
+    grid-area: london;
+  }
+  
+  div.city{
+    background-color: black;
+    color: white;
+    height: 100%
+  }
+}
+
+@media only screen and (min-device-width : 1024px) {
+  section{
+    width: 40%;
+    min-width: 1004px;
+    height: 100%;
+  }
+}
